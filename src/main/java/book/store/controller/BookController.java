@@ -51,6 +51,7 @@ public class BookController {
                               @RequestBody @Valid CreateBookRequestDto requestDto) {
         return bookService.update(id, requestDto);
     }
+
     @Operation(summary = "Delete book", description = "Delete book")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(value = "/{id}")
