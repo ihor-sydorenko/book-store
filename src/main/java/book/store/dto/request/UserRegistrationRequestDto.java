@@ -1,6 +1,7 @@
 package book.store.dto.request;
 
 import book.store.validation.FieldMatch;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -12,7 +13,7 @@ import lombok.Data;
         message = "Passwords do not match!"
 )
 public class UserRegistrationRequestDto {
-    @NotBlank
+    @Email
     private String email;
     @NotBlank
     @Size(min = 8, max = 100)
