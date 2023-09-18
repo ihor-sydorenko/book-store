@@ -2,6 +2,7 @@ package book.store.service;
 
 import book.store.dto.request.CreateBookRequestDto;
 import book.store.dto.response.BookDto;
+import book.store.dto.response.BookDtoWithoutCategoryIds;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 
@@ -17,4 +18,6 @@ public interface BookService {
     void deleteById(Long id);
 
     List<BookDto> findByTitle(String title);
+
+    List<BookDtoWithoutCategoryIds> findAllByCategoryId(Long categoryId);
 }
